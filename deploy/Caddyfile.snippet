@@ -1,6 +1,7 @@
 # Blocco da aggiungere a /etc/caddy/Caddyfile sul VPS Infomaniak (accanto a peter.lachi.solutions).
 # I file stanno in /var/www/lachi.solutions (deploy/publish.sh li copia con rsync).
 # Caddy prende i certificati Let's Encrypt da solo per entrambi i nomi.
+# Prima volta: `sudo chown -R caddy:caddy /var/log/caddy`, altrimenti il reload fallisce sul file di log.
 
 lachi.solutions {
 	redir https://www.lachi.solutions{uri} permanent

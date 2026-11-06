@@ -2,7 +2,8 @@
 # Pubblica il sito sul VPS Infomaniak (lo stesso di Magic Peter): rsync nella home dell'utente,
 # poi copia con sudo in /var/www/lachi.solutions.
 # Uso: deploy/publish.sh [utente@host]   (default debian@185.143.102.108, chiave ~/.ssh/magic-peter)
-# Prima volta sul VPS: aggiungere deploy/Caddyfile.snippet a /etc/caddy/Caddyfile e `sudo systemctl reload caddy`.
+# Prima volta sul VPS: `sudo chown -R caddy:caddy /var/log/caddy`, aggiungere deploy/Caddyfile.snippet (una sola volta!)
+# a /etc/caddy/Caddyfile, `sudo caddy validate --config /etc/caddy/Caddyfile` e `sudo systemctl reload caddy`.
 set -eu
 HOST="${1:-debian@185.143.102.108}"
 KEY="${SSH_KEY:-$HOME/.ssh/magic-peter}"
