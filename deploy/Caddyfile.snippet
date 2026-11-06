@@ -1,0 +1,31 @@
+# Blocco da aggiungere a /etc/caddy/Caddyfile sul VPS Infomaniak (accanto a peter.lachi.solutions).
+# I file stanno in /var/www/lachi.solutions (deploy/publish.sh li copia con rsync).
+# Caddy prende i certificati Let's Encrypt da solo per entrambi i nomi.
+
+lachi.solutions {
+	redir https://www.lachi.solutions{uri} permanent
+}
+
+www.lachi.solutions {
+	root * /var/www/lachi.solutions
+	encode zstd gzip
+	file_server
+	header {
+		-Server
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		Content-Security-Policy "default-src 'self'; style-src 'self'; font-src 'self'; script-src 'self'; img-src 'self' data:"
+	}
+	@html path / /fr/ /en/ /it/ /sl/ /*.html
+	header @html Cache-Control "max-age=600"
+	header /assets/* Cache-Control "max-age=604800"
+	handle_errors {
+		rewrite * /fr/index.html
+		file_server
+	}
+	log {
+		output file /var/log/caddy/lachi.solutions.log
+		format console
+	}
+}

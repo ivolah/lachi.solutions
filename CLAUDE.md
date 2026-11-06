@@ -7,6 +7,7 @@ Questo repository contiene il sito vetrina di Lachi Solutions, consulenza IT ind
 - `index.html` reindirizza a `fr/` (o alla lingua salvata/del browser via JS).
 - `fr/`, `en/`, `it/`, `sl/`: una `index.html` per lingua; `fr/mentions-legales.html`, `fr/confidentialite.html`, `en/legal-notice.html`, `en/privacy.html`.
 - `assets/style.css`, `assets/lang.js`, `assets/favicon.svg`.
+- `deploy/`: `Caddyfile.snippet` (blocco per il Caddy del VPS Infomaniak che serve anche Magic Peter) e `publish.sh` (rsync in `/var/www/lachi.solutions`). Hosting: VPS Infomaniak 185.143.102.108, DNS su Infomaniak (A/AAAA di `@` e `www` → VPS). GitHub `ivolah/lachi.solutions` è sorgente e anteprima (Pages su github.io), non l'hosting definitivo.
 - `tools/gen.py`: generatore opzionale (testi in un dizionario Python → HTML). Non è un build step obbligatorio: le pagine HTML sono committate e si possono modificare a mano; se si usa il generatore, rilanciarlo con `python3 tools/gen.py` dalla radice.
 
 ## Regole di lavoro
