@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Lachi Solutions</title>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url=fr/">
+  <link rel="canonical" href="https://www.lachi.solutions/fr/">
+  <script>
+    (function () {
+      var langs = ["fr", "en", "it", "sl"], pick = "fr";
+      try { pick = localStorage.getItem("ls-lang") || (navigator.language || "fr").slice(0, 2).toLowerCase(); } catch (e) {}
+      if (langs.indexOf(pick) < 0) pick = "fr";
+      location.replace(pick + "/" + (location.protocol === "file:" ? "index.html" : ""));
+    })();
+  </script>
+</head>
+<body>
+  <p><a href="fr/">Français</a> · <a href="en/">English</a> · <a href="it/">Italiano</a> · <a href="sl/">Slovenščina</a></p>
+</body>
+</html>
