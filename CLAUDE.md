@@ -23,8 +23,8 @@ Questo repository contiene il sito vetrina di Lachi Solutions, consulenza IT ind
 * HTML statico + CSS, senza framework CSS e senza build step obbligatorio. JavaScript solo per il selettore lingua (poche righe, vanilla).
 * Una pagina per lingua in sottocartella (`/fr/index.html`, `/en/`, `/it/`, `/sl/`), con `/index.html` che reindirizza a `/fr/` (lingua di default: francese, sede a Ginevra).
 * Tag `hreflang` incrociati tra le quattro versioni. `lang` corretto su `<html>`.
-* Font: system stack (`-apple-system, "Segoe UI", Inter, Roboto, sans-serif`). Niente Google Fonts remoto.
-* Palette sobria: sfondo bianco o quasi bianco, testo grigio molto scuro, un solo colore d'accento (verde petrolio `#0f5c6e`). Massimo due pesi tipografici (400, 600).
+* Font: Archivo self-hosted (pesi 300, 400, 800), subset Latin + Latin Extended. Niente Google Fonts remoto.
+* Palette del design system Lachi Solutions: sfondo grigio `#f3f2f2`, testo nero `#201e1d`, un solo accento rosso `#ec3013` (scuro `#ae1800`), angoli vivi, logo tipografico "lachi ■ / solutions" (ExtraBold + quadrato rosso, barra 2 px, sottotitolo Light). Pesi: 300 solo nel logo, 400 testo, 800 titoli.
 * Responsive, mobile-first, contrasto AA, HTML semantico, `<title>` e `<meta description>` per lingua, Open Graph minimo, favicon SVG.
 * Dimensione totale della pagina sotto i 200 KB.
 

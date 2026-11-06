@@ -175,7 +175,7 @@ def head(lang, title, desc, path, alternates=True):
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{SITE}/{path}">
   <meta property="og:locale" content="{locale}">
-  <meta name="theme-color" content="#0f5c6e">
+  <meta name="theme-color" content="#f3f2f2">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css">
 </head>"""
@@ -186,7 +186,7 @@ def header(lang):
         for l in LANGS)
     return f"""<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="../{lang}/"><span class="mono" aria-hidden="true">LS</span>Lachi Solutions</a>
+    <a class="logo" href="../{lang}/" aria-label="Lachi Solutions"><span class="logo-word">lachi<span class="logo-dot"></span></span><span class="logo-bar" style="display:block"></span><span class="logo-sub">solutions</span></a>
     <nav aria-label="Language"><ul class="lang">{items}</ul></nav>
   </div>
 </header>"""
@@ -218,7 +218,7 @@ def home(lang):
 <body>
 {header(lang)}
 <main>
-  <section class="hero" style="border-top:0">
+  <section class="hero">
     <div class="wrap">
       <h1>{t["h1"]}</h1>
       <p class="lead">{t["lead"]}</p>
